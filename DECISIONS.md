@@ -32,6 +32,9 @@ This register reflects current project direction. Historical reference documents
 | C-024 | Final color palette remains TBD unless a current explicit decision/reference is found. | Open | Coding agent must not invent final palette. |
 | C-025 | Multi-tenant SaaS, billing and tenant separation are not current MVP scope. | Deferred | Future scope only. |
 | C-026 | Do not build autonomous agent/workflow execution in the initial implementation. | Deferred | Capture/transform/retrieve first. |
+| C-027 | Use Supabase Auth for application authentication. | Adopted | User decision, 2026-11-26. Chosen over Entra ID or self-managed auth to align with the current Supabase direction; this does not by itself decide where relational data is hosted. |
+| C-028 | Bootstrap the first organization owner once, then allow membership by invitation only. | Adopted | User decision, 2026-11-26. Avoids ongoing public registration; bootstrap must be protected and safe against concurrent first-user creation. |
+| C-029 | Super Admin owns organization-level control; Admin can manage members, projects, captures and knowledge review, but cannot transfer ownership or grant Super Admin; Members can submit captures and use authorized knowledge. | Adopted | User decision, 2026-11-26. Server-side enforcement is mandatory. |
 
 ## Explicitly superseded historical decisions
 
@@ -44,18 +47,16 @@ This register reflects current project direction. Historical reference documents
 
 ## Open decisions to resolve through repository audit/design
 
-1. What is already implemented in the repository and what must be preserved?
-2. Exact COKF schema, artifact directory/storage strategy and schema versioning.
-3. Vector backend: ChromaDB vs pgvector. Select one after examining existing code and operational constraints.
-4. Exact LLM provider/model and transcription method; avoid hardcoding provider into core logic.
-5. Background job/queue technology for processing.
-6. Which source formats are actually supported in the first release.
-7. Which knowledge types require mandatory human approval vs can be auto-accepted.
-8. Local Agent packaging, platform support and source-permission UI.
-9. Exact RBAC permission matrix for Super Admin, Admin and Member.
-10. Storage retention/deletion policy for raw sources and generated artifacts.
-11. Deployment provider and environment strategy.
-12. Final approved brand palette and typography decisions.
+1. Exact COKF schema, artifact directory/storage strategy and schema versioning.
+2. Vector backend: ChromaDB vs pgvector. Select one after examining existing code and operational constraints.
+3. Exact LLM provider/model and transcription method; avoid hardcoding provider into core logic.
+4. Background job/queue technology for processing.
+5. Which source formats are actually supported in the first release.
+6. Which knowledge types require mandatory human approval vs can be auto-accepted.
+7. Local Agent packaging, platform support and source-permission UI.
+8. Storage retention/deletion policy for raw sources and generated artifacts.
+9. Deployment provider and environment strategy.
+10. Final approved brand palette and typography decisions.
 
 ## Change protocol
 

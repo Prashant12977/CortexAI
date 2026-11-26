@@ -34,8 +34,10 @@ features out of scope and resolve open decisions before they block a phase.
 
 ## Phase 2 — Authentication, organization, and RBAC
 
+- [x] Record Supabase Auth, one-time owner bootstrap followed by invitation-only
+  enrollment, and the approved role boundaries in `DECISIONS.md`.
 - [ ] Implement authentication and single-organization setup.
-- [ ] Define the Super Admin, Admin, and Member permission matrix.
+- [x] Define the Super Admin, Admin, and Member permission matrix.
 - [ ] Enforce permissions server-side for routes and actions.
 - [ ] Test role restrictions at the API level.
 
