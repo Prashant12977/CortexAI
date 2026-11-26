@@ -36,9 +36,15 @@ features out of scope and resolve open decisions before they block a phase.
 
 - [x] Record Supabase Auth, one-time owner bootstrap followed by invitation-only
   enrollment, and the approved role boundaries in `DECISIONS.md`.
-- [ ] Implement authentication and single-organization setup.
+- [x] Connect Supabase SSR clients and refresh sessions through the Next.js
+  request proxy.
+- [x] Add server-verified sign-in, protected workspace access, and sign-out.
+- [ ] Implement the protected first-owner bootstrap and invitation flows.
+- [ ] Add organization membership schema, RLS policies, and server-side role
+  authorization.
 - [x] Define the Super Admin, Admin, and Member permission matrix.
-- [ ] Enforce permissions server-side for routes and actions.
+- [ ] Enforce membership and role permissions server-side for routes and
+  actions.
 - [ ] Test role restrictions at the API level.
 
 ## Phase 3 — Projects and workspace

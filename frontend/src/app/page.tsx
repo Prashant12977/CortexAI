@@ -14,6 +14,9 @@ export default function Home() {
           Cortex is being built to capture authorized work sources, preserve
           their context, and make verified knowledge easier to use.
         </p>
+        <p className="workspace-link">
+          <a href="/login">Sign in to your workspace</a>
+        </p>
       </section>
     </main>
   );

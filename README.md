@@ -15,6 +15,10 @@ repository:
 
 Requirements: Node.js 20.9 or newer and Python 3.12 or newer.
 
+For Supabase sign-in, copy `frontend/.env.example` to
+`frontend/.env.local` and set the project URL and publishable key. Never put
+the Supabase secret/service-role key in frontend code or commit it.
+
 In one PowerShell terminal, start the API:
 
 ```powershell
