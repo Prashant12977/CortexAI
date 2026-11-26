@@ -1,35 +1,36 @@
 # Cortex Project To-Do List
 
-This list follows `AGENTS.md`, `DECISIONS.md`, and `IMPLEMENTATION_PLAN.md`.
-Work in order and keep the MVP focused on the capture-to-grounded-answer
-workflow. Do not start implementation phases without first auditing the actual
-repository and resolving the decisions that block that phase.
+Follow `AGENTS.md`, `DECISIONS.md`, and `IMPLEMENTATION_PLAN.md`. Build
+incrementally toward the capture-to-grounded-answer MVP. Keep deferred
+features out of scope and resolve open decisions before they block a phase.
 
 ## Project setup
 
-- [x] Initialize a Git repository on `main`.
-- [x] Add the project brief, system design, implementation plan, UI plan,
-  decisions, and agent handoff documents to the repository root.
+- [x] Initialize Git on `main` and connect it to the public GitHub repository.
+- [x] Add the supplied product, design, architecture, implementation, and agent
+  handoff documents to the repository.
 - [x] Create the initial Git checkpoint.
 
 ## Phase 0 — Repository audit and safe baseline
 
-- [ ] Record repository structure, branch, status, and commit history.
-- [ ] Identify the frontend/backend stack, dependencies, conventions, and
-  existing application functionality.
-- [ ] Audit authentication, authorization, APIs, persistence, processing,
-  UI, and tests; identify what must be preserved.
-- [ ] Run available baseline lint, type-check, test, and build commands.
-- [ ] Report findings, conflicts, risks, and a repository-aware Phase 1 plan.
+- [x] Confirm repository, branch, status, history, and tracked files.
+- [x] Confirm the starting point contains handoff documents only, with no
+  existing application code or prior baseline checks.
+- [x] Run initial lint, build, and backend test checks after scaffolding.
+- [x] Confirm no existing authentication, authorization, APIs, persistence,
+  processing, UI, or tests needed preservation.
+- [x] Identify the documented frontend/backend direction and preserve open
+  decisions.
 
 ## Phase 1 — Architecture and foundation
 
-- [ ] Confirm application/module boundaries and environment/secrets handling.
-- [ ] Define API/error-handling, database migration, logging, and job-processing
-  conventions.
-- [ ] Confirm frontend design foundations without inventing the TBD palette.
-- [ ] Add minimal health/status checks and document local configuration.
-- [ ] Verify the application runs locally and baseline checks pass.
+- [x] Scaffold a Next.js/React/TypeScript frontend and FastAPI backend.
+- [x] Establish clear frontend/backend boundaries and local run instructions.
+- [x] Add a minimal API liveness endpoint and focused test.
+- [x] Keep the initial UI simple and avoid finalizing the TBD palette.
+- [ ] Document environment/secrets, API/error, database migration, logging,
+  and job-processing conventions without choosing unresolved infrastructure.
+- [x] Run the frontend lint/build and backend tests; verify both apps run locally.
 
 ## Phase 2 — Authentication, organization, and RBAC
 
